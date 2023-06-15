@@ -3,9 +3,9 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=qt6-base
-_qtver=6.5.1
+_qtver=6.6.0-beta1
 pkgver=${_qtver/-/}
-pkgrel=2
+pkgrel=1
 arch=(x86_64)
 url='https://www.qt.io'
 license=(GPL3 LGPL3 FDL custom)
@@ -25,11 +25,11 @@ optdepends=('qt6-wayland: to run Qt6 applications in a Wayland session'
             'perl: for syncqt')
 groups=(qt6)
 _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
-source=(https://download.qt.io/official_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz
+source=(https://download.qt.io/development_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz
         qtbug-114204.patch::https://code.qt.io/cgit/qt/qtbase.git/patch/?id=9177dbd8
         qt6-base-cflags.patch
         qt6-base-nostrip.patch)
-sha256sums=('db56fa1f4303a1189fe33418d25d1924931c7aef237f89eea9de58e858eebfed'
+sha256sums=('fca8d788331b63d75b92311be01a83da051e29a9b6050f10217d61903b5a7277'
             '1730b675ede24d80c2e73a2f662cc73718f3060c0b8a707784d188bb11297c4e'
             '5411edbe215c24b30448fac69bd0ba7c882f545e8cf05027b2b6e2227abc5e78'
             '4b93f6a79039e676a56f9d6990a324a64a36f143916065973ded89adc621e094')
