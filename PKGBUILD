@@ -44,6 +44,7 @@ depends=(brotli
          sqlite
          systemd-libs
          tslib
+         vulkan-headers
          xcb-util-cursor
          xcb-util-image
          xcb-util-keysyms
@@ -64,7 +65,6 @@ makedepends=(alsa-lib
              ninja
              postgresql
              unixodbc
-             vulkan-headers
              xmlstarlet)
 optdepends=('freetds: MS SQL driver'
             'gdk-pixbuf2: GTK platform plugin'
