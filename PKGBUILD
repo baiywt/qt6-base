@@ -10,19 +10,72 @@ arch=(x86_64)
 url='https://www.qt.io'
 license=(GPL3 LGPL3 FDL custom)
 pkgdesc='A cross-platform application and UI framework'
-depends=(libjpeg-turbo xcb-util-keysyms xcb-util-cursor libgl fontconfig xdg-utils
-         shared-mime-info xcb-util-wm libxrender libxi sqlite mesa vulkan-headers
-         tslib libinput libxkbcommon-x11 libproxy libcups double-conversion brotli libb2 md4c)
-makedepends=(cmake ninja libfbclient mariadb-libs unixodbc postgresql alsa-lib gst-plugins-base-libs
-             gtk3 libpulse cups freetds xmlstarlet)
-optdepends=('qt6-wayland: to run Qt6 applications in a Wayland session'
-            'postgresql-libs: PostgreSQL driver'
-            'mariadb-libs: MariaDB driver'
-            'unixodbc: ODBC driver'
-            'libfbclient: Firebird/iBase driver'
-            'freetds: MS SQL driver'
+depends=(brotli
+         dbus
+         double-conversion
+         fontconfig
+         freetype2
+         gcc-libs
+         glib2
+         glibc
+         harfbuzz
+         icu
+         krb5
+         libb2
+         libcups
+         libdrm
+         libgl
+         libice
+         libinput
+         libjpeg-turbo
+         libpng
+         libproxy
+         libsm
+         libx11
+         libxcb
+         libxkbcommon
+         libxkbcommon-x11
+         md4c
+         mesa
+         mtdev
+         openssl
+         pcre2
+         shared-mime-info
+         sqlite
+         systemd-libs
+         tslib
+         xcb-util-cursor
+         xcb-util-image
+         xcb-util-keysyms
+         xcb-util-renderutil
+         xcb-util-wm
+         xdg-utils
+         zlib
+         zstd)
+makedepends=(alsa-lib
+             cmake
+             cups
+             freetds
+             gst-plugins-base-libs
+             gtk3
+             libfbclient
+             libpulse
+             mariadb-libs
+             ninja
+             postgresql
+             unixodbc
+             vulkan-headers
+             xmlstarlet)
+optdepends=('freetds: MS SQL driver'
+            'gdk-pixbuf2: GTK platform plugin'
             'gtk3: GTK platform plugin'
-            'perl: for syncqt')
+            'libfbclient: Firebird/iBase driver'
+            'mariadb-libs: MariaDB driver'
+            'pango: GTK platform plugin'
+            'perl: for syncqt'
+            'postgresql-libs: PostgreSQL driver'
+            'qt6-wayland: to run Qt6 applications in a Wayland session'
+            'unixodbc: ODBC driver')
 groups=(qt6)
 _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
 source=(https://download.qt.io/development_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz
