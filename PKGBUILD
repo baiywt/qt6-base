@@ -3,7 +3,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=qt6-base
-_qtver=6.6.0-rc
+_qtver=6.7.0-beta1
 pkgver=${_qtver/-/}
 pkgrel=1
 arch=(x86_64)
@@ -81,7 +81,7 @@ _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
 source=(https://download.qt.io/development_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz
         qt6-base-cflags.patch
         qt6-base-nostrip.patch)
-sha256sums=('c8074a05554d5fe1986ee00386ccbaf24b58ff06410154a98898592f98f36fba'
+sha256sums=('f46d3f23e1750c6178e6f4f470db8c23a88f8199ada7c1e6e32b778fcc48284a'
             '5411edbe215c24b30448fac69bd0ba7c882f545e8cf05027b2b6e2227abc5e78'
             '4b93f6a79039e676a56f9d6990a324a64a36f143916065973ded89adc621e094')
 
