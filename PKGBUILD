@@ -5,7 +5,7 @@
 pkgname=qt6-base
 _qtver=6.7.0-beta1
 pkgver=${_qtver/-/}
-pkgrel=2
+pkgrel=1
 arch=(x86_64)
 url='https://www.qt.io'
 license=(GPL3 LGPL3 FDL custom)
@@ -80,17 +80,14 @@ groups=(qt6)
 _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
 source=(https://download.qt.io/development_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz
         qt6-base-cflags.patch
-        qt6-base-nostrip.patch
-        fix-abi-break.patch)
+        qt6-base-nostrip.patch)
 sha256sums=('f46d3f23e1750c6178e6f4f470db8c23a88f8199ada7c1e6e32b778fcc48284a'
             '5411edbe215c24b30448fac69bd0ba7c882f545e8cf05027b2b6e2227abc5e78'
-            '4b93f6a79039e676a56f9d6990a324a64a36f143916065973ded89adc621e094'
-            'f18a17f5a6eb29194c73160911fd35b8e598ac89def6edf2e6a9bf0cc1a11ca5')
+            '4b93f6a79039e676a56f9d6990a324a64a36f143916065973ded89adc621e094')
 
 prepare() {
   patch -d $_pkgfn -p1 < qt6-base-cflags.patch # Use system CFLAGS
   patch -d $_pkgfn -p1 < qt6-base-nostrip.patch # Don't strip binaries with qmake
-  patch -d $_pkgfn -p1 < fix-abi-break.patch
 }
 
 build() {
