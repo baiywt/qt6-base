@@ -1,7 +1,7 @@
 pkgbase = qt6-base
 	pkgdesc = A cross-platform application and UI framework
-	pkgver = 6.7.0beta1
-	pkgrel = 1
+	pkgver = 6.6.1
+	pkgrel = 2
 	url = https://www.qt.io
 	arch = x86_64
 	groups = qt6
@@ -75,10 +75,10 @@ pkgbase = qt6-base
 	optdepends = postgresql-libs: PostgreSQL driver
 	optdepends = qt6-wayland: to run Qt6 applications in a Wayland session
 	optdepends = unixodbc: ODBC driver
-	source = https://download.qt.io/development_releases/qt/6.7/6.7.0-beta1/submodules/qtbase-everywhere-src-6.7.0-beta1.tar.xz
+	source = https://download.qt.io/official_releases/qt/6.6/6.6.1/submodules/qtbase-everywhere-src-6.6.1.tar.xz
 	source = qt6-base-cflags.patch
 	source = qt6-base-nostrip.patch
-	sha256sums = f46d3f23e1750c6178e6f4f470db8c23a88f8199ada7c1e6e32b778fcc48284a
+	sha256sums = 450c5b4677b2fe40ed07954d7f0f40690068e80a94c9df86c2c905ccd59d02f7
 	sha256sums = 5411edbe215c24b30448fac69bd0ba7c882f545e8cf05027b2b6e2227abc5e78
 	sha256sums = 4b93f6a79039e676a56f9d6990a324a64a36f143916065973ded89adc621e094
 
