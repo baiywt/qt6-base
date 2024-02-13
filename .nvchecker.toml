@@ -1,0 +1,6 @@
+[qt6-base]
+source = 'git'
+git = 'git://code.qt.io/qt/qtbase.git'
+include_regex = '.*(alpha|beta|rc).*'
+from_pattern = 'v(.*)-(.*)'
+to_pattern = '\1\2'
