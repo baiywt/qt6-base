@@ -1,7 +1,7 @@
 pkgbase = qt6-base
 	pkgdesc = A cross-platform application and UI framework
 	pkgver = 6.6.2
-	pkgrel = 2
+	pkgrel = 3
 	url = https://www.qt.io
 	arch = x86_64
 	groups = qt6
@@ -85,6 +85,7 @@ pkgbase = qt6-base
 	sha256sums = ff0de01b5afafab6d36f0a18ac1ab3ade2107ca75f03123da024a07d7eba2d97
 
 pkgname = qt6-base
+	pkgdesc = A cross-platform application and UI framework
 	depends = brotli
 	depends = dbus
 	depends = double-conversion
@@ -129,3 +130,9 @@ pkgname = qt6-base
 	depends = zlib
 	depends = zstd
 	depends = qt6-translations
+
+pkgname = qt6-xcb-private-headers
+	pkgdesc = Private headers for Qt6 Xcb
+	groups = 
+	depends = qt6-base=6.6.2
+	optdepends = 
