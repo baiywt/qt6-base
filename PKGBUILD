@@ -5,7 +5,7 @@
 pkgname=qt6-base
 _qtver=6.6.2
 pkgver=${_qtver/-/}
-pkgrel=1
+pkgrel=2
 arch=(x86_64)
 url='https://www.qt.io'
 license=(GPL3 LGPL3 FDL custom)
@@ -80,14 +80,17 @@ groups=(qt6)
 _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
 source=(https://download.qt.io/official_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz
         qt6-base-cflags.patch
-        qt6-base-nostrip.patch)
+        qt6-base-nostrip.patch
+        qt-6.6.2-revert-ABI-break.patch::https://code.qt.io/cgit/qt/qtbase.git/patch/?id=fb92bb07)
 sha256sums=('b89b426b9852a17d3e96230ab0871346574d635c7914480a2a27f98ff942677b'
             '5411edbe215c24b30448fac69bd0ba7c882f545e8cf05027b2b6e2227abc5e78'
-            '4b93f6a79039e676a56f9d6990a324a64a36f143916065973ded89adc621e094')
+            '4b93f6a79039e676a56f9d6990a324a64a36f143916065973ded89adc621e094'
+            'ff0de01b5afafab6d36f0a18ac1ab3ade2107ca75f03123da024a07d7eba2d97')
 
 prepare() {
   patch -d $_pkgfn -p1 < qt6-base-cflags.patch # Use system CFLAGS
   patch -d $_pkgfn -p1 < qt6-base-nostrip.patch # Don't strip binaries with qmake
+  patch -d $_pkgfn -Rp1 < qt-6.6.2-revert-ABI-break.patch # Revert ABI break in 6.6.2
 }
 
 build() {
