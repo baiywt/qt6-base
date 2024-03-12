@@ -4,7 +4,7 @@
 
 pkgbase=qt6-base
 pkgname=(qt6-base qt6-xcb-private-headers)
-_qtver=6.7.0-beta3
+_qtver=6.7.0-rc
 pkgver=${_qtver/-/}
 pkgrel=1
 arch=(x86_64)
@@ -82,7 +82,7 @@ _pkgfn=${pkgbase/6-/}-everywhere-src-$_qtver
 source=(https://download.qt.io/development_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz
         qt6-base-cflags.patch
         qt6-base-nostrip.patch)
-sha256sums=('90d84a490de81ad1a6cf1f84d7aa628b7aba328ff0482f3aec0c7db9a4d8888b'
+sha256sums=('eec10a4e40faf1d6ba346f3ac5eb3ae42593eb99fd1e82abf25a71b733956ae6'
             '5411edbe215c24b30448fac69bd0ba7c882f545e8cf05027b2b6e2227abc5e78'
             '4b93f6a79039e676a56f9d6990a324a64a36f143916065973ded89adc621e094')
 
